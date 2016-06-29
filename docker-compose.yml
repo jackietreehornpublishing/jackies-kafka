@@ -1,0 +1,29 @@
+version: '2'
+networks:
+  micronet:
+services:
+  zoo:
+    image: wurstmeister/zookeeper
+    container_name: zoo
+    ports:
+     - "2181:2181"
+    networks:
+      - micronet
+      
+  kafka:
+    image: wurstmeister/kafka
+    container_name: kafka
+    ports:
+     - "9092:9092"
+    networks:
+      - micronet
+    depends_on:
+     - zoo
+    environment:
+     KAFKA_BROKER_ID: 1
+     KAFKA_ADVERTISED_HOST_NAME: kafka
+     KAFKA_ADVERTISED_PORT: 9092
+     KAFKA_ZOOKEEPER_CONNECT: zoo:2181
+     KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'false'
+     KAFKA_DEFAULT_REPLICATION_FACTOR: 1
+    

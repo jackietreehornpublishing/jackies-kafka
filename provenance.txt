@@ -1,0 +1,31 @@
+Template info:
+
+Group: jackietreehornpublishing
+Name: local-kafka-infra
+Version 1.0.0-SNAPSHOT
+
+Backing GitHub repo:
+Owner: jackietreehornpublishing
+Repo: treehorn-local-kafka-infra
+Branch: master
+Path (within repo): 
+sha: fae136bf25fc51256c029c55e78752bcc0313177
+
+
+Parameter values (passed in on template invocation):
+description='Kafka for running locally'
+team-id='T1KHULA3E'
+name='jackies-kafka'
+template='local-kafka-infra'
+user-id='U1KGQ9YGK'
+kafka_host_ip='192.168.99.100'
+author='Dude'
+group_id='jackietreehornpublishing'
+org='jackietreehornpublishing'
+version='0.0.1'
+artifact_id='jackies-kafka'
+visibility='public'
+
+Computed parameter values (computed based on parameter values passed in):
+date_time='29 06 2016 '
+creation_date='Wed Jun 29 2016 16:19:55 GMT+0000 (UTC)'
